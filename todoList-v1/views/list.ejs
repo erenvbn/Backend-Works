@@ -1,0 +1,26 @@
+<%- include("header") -%>
+
+<body style="padding-top: 150px;">
+    <div class="box" id="heading">
+        <h1><%= listCategoryinEJS %> </h1>
+        <h1><%= todayinEJS %> </h1>
+    </div>
+    <% for( let i = 0; i < itemsArrayinEJS.length; i++ ) { %>
+        <div class="boxItem">
+            <input type="checkbox" name="" id="">
+            <p class="item"><%= itemsArrayinEJS[i] %></p>
+        </div>
+    <% } %>
+
+    <div class="boxItemButton">
+        <form action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="addButton" value="<%= listCategoryinEJS %>"> + </button>
+        </form>
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+<%- include("footer") -%>
+
